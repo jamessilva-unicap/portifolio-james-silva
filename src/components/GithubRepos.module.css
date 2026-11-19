@@ -1,0 +1,135 @@
+.wrapper {
+  width: 100%;
+}
+
+.repoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.repoCard {
+  display: flex;
+  min-height: 205px;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  background: var(--surface);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.repoCard:hover {
+  transform: translateY(-4px);
+  border-color: #b6c69d;
+  box-shadow: var(--shadow-card);
+}
+
+.repoTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #769540;
+}
+
+.repoIcon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 10px;
+  background: #edf2e6;
+  font-size: 1.1rem;
+}
+
+.repoCard h3 {
+  overflow: hidden;
+  margin: 15px 0 4px;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.repoCard p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.repoMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  background: var(--surface);
+}
+
+.messageIcon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf2e6;
+  color: #668831;
+}
+
+.message strong {
+  font-size: 0.94rem;
+}
+
+.message p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.message code {
+  border-radius: 4px;
+  padding: 2px 5px;
+  background: var(--surface-muted);
+  color: var(--text);
+  font-size: 0.78rem;
+}
+
+.profileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.profileLink span {
+  color: #779e35;
+}
+
+@media (max-width: 760px) {
+  .repoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .repoGrid {
+    grid-template-columns: 1fr;
+  }
+}
