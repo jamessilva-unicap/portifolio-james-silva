@@ -7,27 +7,27 @@ export const metadata: Metadata = { title: "Projetos" };
 const projects = [
   {
     number: "01",
-    title: "Painel de produtividade",
-    description: "Uma interface simples para organizar tarefas, acompanhar prioridades e visualizar o progresso do dia.",
-    technologies: ["React", "TypeScript", "CSS"],
-    repository: "https://github.com/seu-usuario",
-    demo: "https://github.com/seu-usuario",
+    title: "Regularize",
+    description: "Projeto voltado à regularização e organização de processos, com foco em dados, acompanhamento e facilidade de uso.",
+    technologies: ["Web", "Dados", "Gestão"],
+    repository: "https://github.com/jamessilva-unicap",
+    demo: "https://github.com/jamessilva-unicap",
   },
   {
     number: "02",
-    title: "Clima em foco",
-    description: "Aplicação de clima com busca por cidade, dados atualizados e uma experiência adaptada a qualquer tela.",
-    technologies: ["Next.js", "API REST", "CSS Modules"],
-    repository: "https://github.com/seu-usuario",
-    demo: "https://github.com/seu-usuario",
+    title: "Gerenciamento de dados do RH",
+    description: "Sistema para centralizar e organizar informações de recursos humanos, apoiando consultas e a gestão administrativa.",
+    technologies: ["RH", "Dados", "Gestão"],
+    repository: "https://github.com/jamessilva-unicap",
+    demo: "https://github.com/jamessilva-unicap",
   },
   {
     number: "03",
-    title: "Loja conceito",
-    description: "Experimento de e-commerce com catálogo responsivo, filtros e foco em uma jornada de compra clara.",
-    technologies: ["React", "JavaScript", "CSS Grid"],
-    repository: "https://github.com/seu-usuario",
-    demo: "https://github.com/seu-usuario",
+    title: "Estacione",
+    description: "Aplicação para apoiar o controle e a organização de vagas e veículos em um estacionamento.",
+    technologies: ["Estacionamento", "Dados", "Gestão"],
+    repository: "https://github.com/jamessilva-unicap",
+    demo: "https://github.com/jamessilva-unicap",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function ProjetosPage() {
       </header>
 
       <section>
-        <h2 className="section-label">Projetos em destaque <span className={styles.exampleLabel}>Exemplos editáveis</span></h2>
+        <h2 className="section-label">Projetos em destaque</h2>
         <div className={styles.projectGrid}>
           {projects.map((project) => (
             <article className={`card ${styles.projectCard}`} key={project.number}>
@@ -74,7 +74,6 @@ export default function ProjetosPage() {
         </div>
         <GithubRepos />
       </section>
-      <p className={styles.editNote}>Os projetos em destaque são exemplos. Troque pelos seus repositórios, demos e descrições.</p>
     </div>
   );
 }
